@@ -1,4 +1,4 @@
-# OrangeFox device tree for Samsung S20 Ultra (x3s)
+# OrangeFox device tree for Samsung S20 Ultra (z3s)
 
 ## ⚙️ Kernel source
 
@@ -27,11 +27,11 @@ cd ~/OrangeFox_sync/sync/
 ./orangefox_sync.sh --branch 12.1 --path ~/fox_12.1
 ```
 
-### Clone x3s device tree
+### Clone z3s device tree
 
 ```bash
 cd ~/fox_12.1
-git clone -b orangefox-12.1 https://github.com/ItsPi3141-Exynos/orangefox_device_samsung_x3s.git device/samsung/x3s
+git clone -b orangefox-12.1 https://github.com/ItsPi3141-Exynos/orangefox_device_samsung_z3s.git device/samsung/z3s
 ```
 
 ### Setup environment variables
@@ -39,15 +39,15 @@ git clone -b orangefox-12.1 https://github.com/ItsPi3141-Exynos/orangefox_device
 ```bash
 . build/envsetup.sh
 export ALLOW_MISSING_DEPENDENCIES=true
-export FOX_BUILD_DEVICE=x3s
+export FOX_BUILD_DEVICE=z3s
 export LC_ALL="C"
 ```
 
 ### Build
 
 ```bash
-. device/samsung/x3s/vendorsetup.sh
-lunch twrp_x3s-eng && mka adbd recoveryimage
+. device/samsung/z3s/vendorsetup.sh
+lunch twrp_z3s-eng && mka adbd recoveryimage
 ```
 
 > [!NOTE]
@@ -61,7 +61,7 @@ lunch twrp_x3s-eng && mka adbd recoveryimage
 
 ### This device tree was adapted from the following repositories
 
-- Original TWRP device tree: <https://github.com/TeamWin/android_device_samsung_x3s/tree/android-11>
+- Original TWRP device tree: <https://github.com/TeamWin/android_device_samsung_z3s/tree/android-11>
 - vendorsetup.sh: <https://gitlab.com/OrangeFox/device/a51nsxx>
 - OrangeFox configuration: <https://gitlab.com/OrangeFox/vendor/recovery/-/blob/master/orangefox_build_vars.txt>
 - Flashlight fix: <https://gitlab.com/OrangeFox/device/a72q>
